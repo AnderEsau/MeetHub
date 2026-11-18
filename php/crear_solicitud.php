@@ -14,14 +14,14 @@ $fin_txt = isset($data['hora_fin']) ? trim($data['hora_fin']) : "";
 $asistentes = isset($data['total_asistentes']) ? intval($data['total_asistentes']) : 0;
 $actividad = isset($data['descripcion_evento']) ? trim($data['descripcion_evento']) : ""; // "Actividad a realizar"
 
-// Tabla y columna que le corresponden a cada tipo de usuario. La columna se llama igual en tblreserva.
+
 $tipos = [
     "Alumno" => ["tblalumnos", "id_alumno"],
     "Docente" => ["tbltrabajadores", "matricula"],
     "Externo" => ["tblexterno", "id_externo"]
 ];
 
-// La fecha puede llegar como 2026-11-20 o como 20/11/2026. Aquí la dejamos siempre como 2026-11-20.
+
 $fecha = false;
 foreach (['Y-m-d', 'd/m/Y'] as $formato) {
     $d = DateTime::createFromFormat($formato, $fecha_txt);
@@ -31,7 +31,7 @@ foreach (['Y-m-d', 'd/m/Y'] as $formato) {
     }
 }
 
-// Las horas pueden llegar como 10:00 o como 10:00:00. Aquí las dejamos siempre como 10:00:00.
+
 $hora_inicio = false;
 $hora_fin = false;
 if (preg_match('/^([01]?\d|2[0-3]):([0-5]\d)(:[0-5]\d)?$/', $inicio_txt, $m)) {
@@ -51,7 +51,7 @@ if (!isset($tipos[$tipo_usuario]) || $id_usuario <= 0 || $id_sala <= 0 || !$fech
     exit;
 }
 
-// Reglas de la solicitud: orden de las horas, día de la semana y días de anticipación.
+
 if ($hora_inicio >= $hora_fin) {
     echo json_encode(["exito" => false, "mensaje" => "La hora de fin debe ser posterior a la hora de inicio"]);
     exit;
@@ -62,8 +62,7 @@ if ((int) date('N', strtotime($fecha)) > 5) {
     exit;
 }
 
-// La solicitud debe hacerse con al menos 3 días hábiles de anticipación.
-// Los sábados y domingos no cuentan.
+
 $minima = new DateTime('today');
 $contados = 0;
 while ($contados < 3) {
@@ -84,9 +83,9 @@ if (mb_strlen($actividad) > 255) {
 
 try {
     $tabla = $tipos[$tipo_usuario][0];
-    $campo = $tipos[$tipo_usuario][1]; // id_alumno, matricula o id_externo (sale de la lista de arriba)
+    $campo = $tipos[$tipo_usuario][1];
 
-    // Revisamos que el usuario exista y esté activo.
+
     $stmt = $pdo->prepare("SELECT COUNT(*) FROM " . $tabla . " WHERE " . $campo . " = ? AND activo = 1");
     $stmt->execute([$id_usuario]);
     if ($stmt->fetchColumn() == 0) {
@@ -94,7 +93,7 @@ try {
         exit;
     }
 
-    // El horario debe ser una franja completa de tblhorarios, o varias franjas una tras otra.
+
     $stmt = $pdo->prepare("SELECT hora_inicio, hora_fin FROM tblhorarios
                            WHERE estado = 'Activo' AND hora_inicio >= ? AND hora_fin <= ?
                            ORDER BY hora_inicio ASC");
@@ -133,7 +132,7 @@ try {
         exit;
     }
 
-    // No se puede pedir un horario que ya está aprobado ni uno que ya tiene otra solicitud pendiente.
+
     $stmt = $pdo->prepare("SELECT COUNT(*) FROM tblreserva
                            WHERE id_sala = ? AND fecha_reserva = ? AND hora_inicio < ? AND hora_fin > ?
                              AND estado_reserva IN ('Aprobada', 'Realizada', 'Pendiente')");
@@ -143,8 +142,7 @@ try {
         exit;
     }
 
-    // El formulario solo pide la actividad, así que también se usa como motivo.
-    // El tipo de evento se guarda como "Académico".
+
     $stmt = $pdo->prepare("INSERT INTO tblreserva (id_sala, " . $campo . ", fecha_solicitud, fecha_reserva, hora_inicio, hora_fin,
                                                    tipo_evento, descripcion_evento, motivo_evento, total_asistentes, estado_reserva)
                            VALUES (?, ?, ?, ?, ?, ?, 'Académico', ?, ?, ?, 'Pendiente')");
