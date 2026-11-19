@@ -13,6 +13,10 @@ interface ApiService {
     @GET("detalle_sala.php")
     suspend fun detalleSala(@Query("sala_id") salaId: Int): dataDetalleSala
 
+    //Samantha
+    @GET("obtener_salas.php")suspend fun obtenerSalas(): List<dataSalas>
+    @POST("crear_cuenta.php")suspend fun crearCuenta(@Body request: CrearCuentaRequest): CrearCuentaResponse
+
     // ---------- Lary ----------
     @POST("verificar_identidad.php")
     suspend fun verificarIdentidad(@Body request: VerificarIdentidadRequest): VerificarIdentidadResponse
@@ -39,5 +43,4 @@ interface ApiService {
 
     @POST("crear_solicitud.php")
     suspend fun crearSolicitud(@Body request: CrearSolicitudRequest): CrearSolicitudResponse
-
 }
