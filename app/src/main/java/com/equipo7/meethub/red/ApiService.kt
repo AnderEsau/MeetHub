@@ -8,6 +8,23 @@ import retrofit2.http.Query
 
 interface ApiService {
 
+    // ---------- Lary ----------
+    @POST("verificar_identidad.php")
+    suspend fun verificarIdentidad(@Body request: VerificarIdentidadRequest): VerificarIdentidadResponse
+
+    @POST("restablecer_password.php")
+    suspend fun restablecerPassword(@Body request: RestablecerPasswordRequest): RestablecerPasswordResponse
+
+    @GET("obtener_mis_reservas.php")
+    suspend fun obtenerMisReservas(
+        @Query("tipo_usuario") tipoUsuario: String,
+        @Query("id_usuario") idUsuario: Int,
+        @Query("sin_sugerencia") sinSugerencia: Int
+    ): List<dataReservas>
+
+    @POST("registrar_sugerencia.php")
+    suspend fun registrarSugerencia(@Body request: RegistrarSugerenciaRequest): RegistrarSugerenciaResponse
+
     // ---------- Leonel ----------
     @GET("obtener_disponibilidad.php")
     suspend fun obtenerDisponibilidad(
