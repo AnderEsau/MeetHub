@@ -7,6 +7,11 @@ import retrofit2.http.POST
 import retrofit2.http.Query
 
 interface ApiService {
+    // Ander
+    @POST("login.php")
+    suspend fun iniciarSesion(@Body request: LoginRequest): LoginResponse
+    @GET("detalle_sala.php")
+    suspend fun detalleSala(@Query("sala_id") salaId: Int): dataDetalleSala
 
     // ---------- Leonel ----------
     @GET("obtener_disponibilidad.php")
