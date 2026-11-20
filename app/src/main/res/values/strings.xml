@@ -63,26 +63,24 @@
     <string name="cuenta_hint_respuesta">Escribe tu respuesta</string>
     <string name="cuenta_btn_crear">Crear cuenta</string>
 
+
     <!-- Leonel - Inicio -->
+    <string name="inicio_hint_fecha">dd/mm/aaaa</string>
     <string name="inicio_encabezado">Inicio</string>
     <string name="inicio_titulo">Biblioteca UTHH</string>
-    <string name="inicio_descripcion">Consulta la disponibilidad y solicita salas con 3 días de anticipación.</string>
+    <string name="inicio_descripcion">Consulta la disponibilidad en tiempo real y solicita salas con al menos 3 días de anticipación.</string>
     <string name="inicio_btn_catalogo">Ver Catálogo de Salas</string>
     <string name="inicio_btn_reservar">Reservar sala</string>
     <string name="inicio_disponibilidad">Disponibilidad de salas</string>
     <string name="inicio_label_sala">Sala</string>
     <string name="inicio_label_fecha">Fecha a consultar (Lunes a Viernes)</string>
-    <string name="inicio_hint_fecha">dd/mm/aaaa</string>
-    <string name="inicio_btn_consultar">Consultar horarios</string>
 
     <!-- Leonel - Nueva solicitud -->
     <string name="solicitud_solicitante">SOLICITANTE: %1$s - %2$s (%3$d)</string>
-    <string name="solicitud_aforo">Aforo mínimo de la sala: %1$d</string>
     <string name="solicitud_encabezado">Nueva solicitud</string>
     <string name="solicitud_label_sala">Sala</string>
     <string name="solicitud_label_fecha">Fecha (mínimo 3 días de anticipación)</string>
     <string name="solicitud_hint_fecha">dd/mm/aaaa</string>
-    <string name="solicitud_btn_horarios">Ver horarios</string>
     <string name="solicitud_label_inicio">Hora de inicio</string>
     <string name="solicitud_label_fin">Hora de fin</string>
     <string name="solicitud_label_asistentes">Número de asistentes</string>
