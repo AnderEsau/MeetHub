@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:orientation="horizontal"
+    android:background="@color/blanco">
+    <TextView
+        android:id="@+id/btnInicio"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/nav_inicio"
+        android:gravity="center"
+        android:drawableTop="@drawable/ic_inicio"
+        android:drawablePadding="2dp"
+        android:paddingTop="6dp"
+        android:textColor="@color/cafe"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true" />
+    <TextView
+        android:id="@+id/btnSalas"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/nav_salas"
+        android:gravity="center"
+        android:drawableTop="@drawable/ic_salas"
+        android:drawablePadding="2dp"
+        android:paddingTop="6dp"
+        android:textColor="@color/cafe"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true" />
+    <TextView
+        android:id="@+id/btnBuzon"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/nav_buzon"
+        android:gravity="center"
+        android:drawableTop="@drawable/ic_buzon"
+        android:drawablePadding="2dp"
+        android:paddingTop="6dp"
+        android:textColor="@color/cafe"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true" />
+</LinearLayout>
