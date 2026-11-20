@@ -1,19 +1,24 @@
 <resources>
+    <string name="app_name">MeetHub</string>
     <!-- Compartidos -->
     <string name="btn_regresar">← Regresar</string>
+    <string name="flecha_spinner">&#9662;</string>
+    <string name="ojo_descripcion">Mostrar u ocultar contraseña</string>
     <string name="logo_descripcion">Logo MeetHub</string>
     <string name="password_ayuda">Mínimo 8 caracteres, con letras y números</string>
+    <string name="login_encabezado_titulo">MeetHub</string>
+    <string name="login_encabezado_subtitulo">Salas de reunión</string>
     <string name="nav_inicio">Inicio</string>
     <string name="nav_salas">Salas</string>
     <string name="nav_buzon">Buzón</string>
-  
-    <!-- Splash -->
+
+    <!--  Splash -->
     <string name="splash_titulo">MeetHub</string>
     <string name="splash_subtitulo">Sistema de reservas de salas de biblioteca</string>
     <string name="splash_cargando">Cargando espacios disponibles...</string>
-  
+
     <!-- Login -->
-    <string name="login_encabezado">MeetHub - Salas de reunión</string>
+    <string name="login_sin_cuenta">¿No tienes cuenta?</string>
     <string name="login_titulo">Iniciar sesión</string>
     <string name="login_descripcion">Accede para consultar y solicitar espacios de la biblioteca UTHH.</string>
     <string name="login_label_identificador">Correo electrónico o matrícula</string>
@@ -22,18 +27,19 @@
     <string name="login_hint_psw">Contraseña</string>
     <string name="login_olvidaste">¿Olvidaste tu contraseña?</string>
     <string name="login_btn_ingresar">Iniciar sesión</string>
-    <string name="login_crear_cuenta">¿No tienes cuenta? Crear cuenta</string>
-  
+    <string name="login_crear_cuenta">Crear cuenta</string>
+
     <!-- Detalle de sala -->
-    <string name="detalle_ubicacion">ÁREA / UBICACIÓN: %1$s</string>
-    <string name="detalle_capacidad">CAPACIDAD MÁXIMA: %1$d personas</string>
-    <string name="detalle_aforo">AFORO MÍNIMO REQUERIDO: %1$d personas</string>
-    <string name="detalle_horario">HORARIO DE ATENCIÓN: Lunes a Viernes (%1$s - %2$s hrs)</string>
-    <string name="detalle_equipamiento">MOBILIARIO Y EQUIPAMIENTO: %1$s</string>
-    <string name="detalle_descripcion">DESCRIPCIÓN: %1$s</string>
+    <string name="detalle_ubicacion">&lt;b&gt;ÁREA / UBICACIÓN:&lt;/b&gt; %1$s</string>
+    <string name="detalle_capacidad">&lt;b&gt;CAPACIDAD MÁXIMA:&lt;/b&gt; %1$d personas</string>
+    <string name="detalle_aforo">&lt;b&gt;AFORO MÍNIMO REQUERIDO:&lt;/b&gt; %1$d personas</string>
+    <string name="detalle_horario">&lt;b&gt;HORARIO DE ATENCIÓN:&lt;/b&gt; Lunes a Viernes (%1$s - %2$s hrs)</string>
+    <string name="detalle_equipamiento">&lt;b&gt;MOBILIARIO Y EQUIPAMIENTO:&lt;/b&gt; %1$s</string>
+    <string name="detalle_descripcion">&lt;b&gt;DESCRIPCIÓN:&lt;/b&gt; %1$s</string>
     <string name="detalle_btn_reservar">Reservar sala</string>
-  
-     <!-- Samantha Catálogo de salas -->
+
+
+    <!-- Samantha Catálogo de salas -->
     <string name="sala_capacidad">Capacidad: %1$d personas\nAforo mínimo: %2$d</string>
     <string name="salas_encabezado">Catálogo de Salas</string>
     <string name="sala_btn_detalles">Ver detalles</string>
