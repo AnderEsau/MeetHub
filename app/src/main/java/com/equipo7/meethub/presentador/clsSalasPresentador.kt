@@ -2,6 +2,7 @@ package com.equipo7.meethub.presentador
 
 import com.equipo7.meethub.modelo.clsSalasModelo
 import com.equipo7.meethub.modelo.dataSalas
+import com.equipo7.meethub.vista.SalasActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
