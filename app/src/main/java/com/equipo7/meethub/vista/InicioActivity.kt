@@ -1,6 +1,8 @@
 package com.equipo7.meethub.vista
 
+import android.app.DatePickerDialog
 import android.content.Intent
+import java.util.Calendar
 import android.os.Bundle
 import android.widget.ImageView
 import android.graphics.Typeface
@@ -107,6 +109,10 @@ class InicioActivity : AppCompatActivity() {
                 override fun onNothingSelected(parent: AdapterView<*>?) {}
             }
 
+        txtFecha.setOnClickListener {
+            elegirFecha(0)
+        }
+
         txtFecha.doAfterTextChanged {
             consultar()
         }
@@ -172,6 +178,25 @@ class InicioActivity : AppCompatActivity() {
         intent.putExtra("NOMBRE_USUARIO", nombreUsuario)
 
         startActivity(intent)
+    }
+
+    private fun elegirFecha(minimoDias: Int) {
+        val minimo = Calendar.getInstance()
+        minimo.add(Calendar.DAY_OF_YEAR, minimoDias)
+
+        val dialogo = DatePickerDialog(
+            this,
+            { _, anio, mes, dia ->
+                txtFecha.setText(
+                    String.format("%04d-%02d-%02d", anio, mes + 1, dia)
+                )
+            },
+            minimo.get(Calendar.YEAR),
+            minimo.get(Calendar.MONTH),
+            minimo.get(Calendar.DAY_OF_MONTH)
+        )
+        dialogo.datePicker.minDate = minimo.timeInMillis
+        dialogo.show()
     }
 
     fun mostrarError(mensaje: String) {

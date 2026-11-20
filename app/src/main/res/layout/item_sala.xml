@@ -1,86 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/fondo_tarjeta"
+    android:padding="12dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp">
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <ImageView
+        android:id="@+id/imgSala"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/ic_menu_gallery" />
+
+    <TextView
+        android:id="@+id/txtNombreSala"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/fondo_tarjeta"
-        android:padding="12dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp">
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/azul_oscuro"
+        android:layout_marginTop="10dp" />
 
-        <ImageView
-            android:id="@+id/imgSala"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@android:drawable/ic_menu_gallery" />
+    <TextView
+        android:id="@+id/txtCapacidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/texto" />
+
+    <TextView
+        android:id="@+id/txtEquipamiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/azul_enlace"
+        android:layout_marginTop="4dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical">
 
         <TextView
-            android:id="@+id/txtNombreSala"
-            android:layout_width="match_parent"
+            android:id="@+id/btnVerDetalles"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:text="@string/sala_btn_detalles"
+            android:background="@drawable/fondo_btn_borde"
+            android:textColor="@color/texto"
             android:textStyle="bold"
-            android:textColor="@color/azul_oscuro"
-            android:layout_marginTop="10dp" />
-
-        <TextView
-            android:id="@+id/txtCapacidad"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:textSize="14sp"
-            android:layout_marginTop="4dp"
-            android:textColor="@color/texto" />
+            android:gravity="center"
+            android:padding="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:minHeight="48dp"
+            android:layout_weight="1"
+            android:layout_marginRight="4dp" />
 
-        <TextView
-            android:id="@+id/txtEquipamiento"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btnReservar"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="13sp"
-            android:textColor="@color/azul_enlace"
-            android:layout_marginTop="4dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="12dp"
-            android:gravity="center_vertical">
-
-            <TextView
-                android:id="@+id/btnVerDetalles"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/sala_btn_detalles"
-                android:background="@drawable/fondo_btn_borde"
-                android:textColor="@color/texto"
-                android:textStyle="bold"
-                android:textSize="14sp"
-                android:gravity="center"
-                android:padding="12dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:layout_weight="1"
-                android:layout_marginRight="4dp" />
-
-            <Button
-                android:id="@+id/btnReservar"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/sala_btn_reservar"
-                android:backgroundTint="@color/cafe"
-                android:textColor="@color/blanco"
-                android:layout_marginTop="0dp"
-                android:layout_weight="1"
-                android:layout_marginLeft="4dp" />
-        </LinearLayout>
+            android:text="@string/sala_btn_reservar"
+            android:backgroundTint="@color/cafe"
+            android:textColor="@color/blanco"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp" />
     </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
