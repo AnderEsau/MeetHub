@@ -1,6 +1,7 @@
 package com.equipo7.meethub.presentador
 
 import com.equipo7.meethub.modelo.clsCrearCuentaModelo
+import com.equipo7.meethub.vista.CrearCuentaActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -25,12 +26,10 @@ class clsCrearCuentaPresentador(private val view: CrearCuentaActivity) {
             view.mostrarError("Todos los campos son obligatorios")
             return
         }
-
         if (psw.length < 8) {
             view.mostrarError("La contraseña debe tener mínimo 8 caracteres")
             return
         }
-
         CoroutineScope(Dispatchers.Main).launch {
             try {
                 val r = modelo.crearCuenta(
