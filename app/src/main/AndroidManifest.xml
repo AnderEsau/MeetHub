@@ -32,8 +32,12 @@
             android:name=".vista.LoginActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+<activity
+            android:name=".vista.InicioActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".vista.inicioActivity"
+            android:name=".vista.DetalleSalaActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

@@ -1,6 +1,9 @@
 package com.equipo7.meethub.vista
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.content.Intent
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,5 +20,10 @@ class SplashActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        // Espera 2.5 segundos y abre el Login
+        Handler(Looper.getMainLooper()).postDelayed({
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }, 2500)
     }
 }
