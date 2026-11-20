@@ -90,4 +90,30 @@
     <string name="solicitud_label_actividad">Actividad a realizar</string>
     <string name="solicitud_hint_actividad">Describe la actividad</string>
     <string name="solicitud_btn_reservar">Reservar sala</string>
+
+    <!-- Lary Restablecer contraseña -->
+    <string name="password_pregunta">Pregunta registrada: %1$s</string>
+    <string name="password_encabezado">Restablecer contraseña</string>
+    <string name="password_paso1">1. Valida tu identidad</string>
+    <string name="password_label_identificador">Correo electrónico o matrícula</string>
+    <string name="password_hint_identificador">Correo o matrícula</string>
+    <string name="password_btn_consultar">Consultar pregunta</string>
+    <string name="password_label_respuesta">Respuesta secreta</string>
+    <string name="password_hint_respuesta">Escribe tu respuesta</string>
+    <string name="password_btn_validar">Validar respuesta</string>
+    <string name="password_paso2">2. Nueva contraseña</string>
+    <string name="password_label_nueva">Nueva contraseña</string>
+    <string name="password_hint_nueva">Nueva contraseña</string>
+    <string name="password_label_confirmar">Confirmar contraseña</string>
+    <string name="password_hint_confirmar">Confirmar contraseña</string>
+    <string name="password_btn_guardar">Guardar contraseña nueva</string>
+
+    <!-- Lary Buzón -->
+    <string name="buzon_item_sala">Sala utilizada: %1$s %2$s</string>
+    <string name="buzon_encabezado">Buzón</string>
+    <string name="buzon_titulo">Buzón de sugerencias y opiniones</string>
+    <string name="buzon_descripcion">Comparte tu opinión sobre el estado, mobiliario o uso de la sala ocupada:</string>
+    <string name="buzon_sin_reservas">Aún no tienes salas utilizadas para opinar.</string>
+    <string name="buzon_hint_comentario">Escribe aquí tu sugerencia o comentario sobre la sala...</string>
+    <string name="buzon_btn_enviar">Enviar sugerencia</string>
 </resources>
