@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fondo">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/azul_oscuro"
+        android:padding="10dp">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo_meethub"
+            android:contentDescription="@string/logo_descripcion" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/inicio_encabezado"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/blanco"
+            android:layout_weight="1"
+            android:layout_marginLeft="12dp" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/fondo_tarjeta"
+                android:padding="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="12dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inicio_titulo"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/azul_oscuro" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inicio_descripcion"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/texto" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/btnVerCatalogo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/inicio_btn_catalogo"
+                        android:background="@drawable/fondo_btn_borde"
+                        android:textColor="@color/cafe"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:minHeight="48dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="4dp" />
+                    <Button
+                        android:id="@+id/btnReservarSala"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/inicio_btn_reservar"
+                        android:backgroundTint="@color/cafe"
+                        android:textColor="@color/blanco"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/fondo_tarjeta"
+                android:padding="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="12dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inicio_disponibilidad"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/azul_oscuro" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inicio_label_sala"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/texto" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+                    <Spinner
+                        android:id="@+id/spnSalas"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/fondo_campo" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/flecha_spinner"
+                        android:textSize="18sp"
+                        android:textColor="@color/texto"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginRight="14dp" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inicio_label_fecha"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/texto" />
+                <EditText
+                    android:id="@+id/txtFecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="@string/inicio_hint_fecha"
+                    android:inputType="date"
+                    android:background="@drawable/fondo_campo"
+                    android:padding="10dp"
+                    android:layout_marginTop="4dp" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHorarios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/barra_inferior" />
+</LinearLayout>
