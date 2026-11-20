@@ -1,52 +1,14 @@
 <resources>
-    <string name="app_name">MeetHub</string>
-    <!-- Compartidos -->
-    <string name="btn_regresar">← Regresar</string>
-    <string name="flecha_spinner">&#9662;</string>
-    <string name="ojo_descripcion">Mostrar u ocultar contraseña</string>
-    <string name="logo_descripcion">Logo MeetHub</string>
-    <string name="password_ayuda">Mínimo 8 caracteres, con letras y números</string>
-    <string name="login_encabezado_titulo">MeetHub</string>
-    <string name="login_encabezado_subtitulo">Salas de reunión</string>
-    <string name="nav_inicio">Inicio</string>
-    <string name="nav_salas">Salas</string>
-    <string name="nav_buzon">Buzón</string>
-
-    <!--  Splash -->
-    <string name="splash_titulo">MeetHub</string>
-    <string name="splash_subtitulo">Sistema de reservas de salas de biblioteca</string>
-    <string name="splash_cargando">Cargando espacios disponibles...</string>
-
-    <!-- Login -->
-    <string name="login_sin_cuenta">¿No tienes cuenta?</string>
-    <string name="login_titulo">Iniciar sesión</string>
-    <string name="login_descripcion">Accede para consultar y solicitar espacios de la biblioteca UTHH.</string>
-    <string name="login_label_identificador">Correo electrónico o matrícula</string>
-    <string name="login_hint_identificador">Correo o matrícula</string>
-    <string name="login_label_psw">Contraseña</string>
-    <string name="login_hint_psw">Contraseña</string>
-    <string name="login_olvidaste">¿Olvidaste tu contraseña?</string>
-    <string name="login_btn_ingresar">Iniciar sesión</string>
-    <string name="login_crear_cuenta">Crear cuenta</string>
-
-    <!-- Detalle de sala -->
-    <string name="detalle_ubicacion">&lt;b&gt;ÁREA / UBICACIÓN:&lt;/b&gt; %1$s</string>
-    <string name="detalle_capacidad">&lt;b&gt;CAPACIDAD MÁXIMA:&lt;/b&gt; %1$d personas</string>
-    <string name="detalle_aforo">&lt;b&gt;AFORO MÍNIMO REQUERIDO:&lt;/b&gt; %1$d personas</string>
-    <string name="detalle_horario">&lt;b&gt;HORARIO DE ATENCIÓN:&lt;/b&gt; Lunes a Viernes (%1$s - %2$s hrs)</string>
-    <string name="detalle_equipamiento">&lt;b&gt;MOBILIARIO Y EQUIPAMIENTO:&lt;/b&gt; %1$s</string>
-    <string name="detalle_descripcion">&lt;b&gt;DESCRIPCIÓN:&lt;/b&gt; %1$s</string>
-    <string name="detalle_btn_reservar">Reservar sala</string>
-
-
+    
     <!-- Samantha Catálogo de salas -->
-    <string name="sala_capacidad">Capacidad: %1$d personas\nAforo mínimo: %2$d</string>
+    <string name="sala_capacidad">Capacidad: %1$d personas Aforo mínimo: %2$d</string>
+    <string name="salas_area_todas">Biblioteca UTHH (Todas las salas)</string>
     <string name="salas_encabezado">Catálogo de Salas</string>
+    <string name="salas_label_area">Área institucional</string>
     <string name="sala_btn_detalles">Ver detalles</string>
     <string name="sala_btn_reservar">Reservar sala</string>
 
     <!-- Samantha Crear cuenta -->
-    <string name="cuenta_encabezado">Crear cuenta</string>
     <string name="cuenta_label_tipo">Tipo de usuario</string>
     <string name="cuenta_label_identificador">Matrícula o RFC</string>
     <string name="cuenta_hint_identificador">Matrícula o RFC</string>
@@ -62,7 +24,6 @@
     <string name="cuenta_label_respuesta">Respuesta</string>
     <string name="cuenta_hint_respuesta">Escribe tu respuesta</string>
     <string name="cuenta_btn_crear">Crear cuenta</string>
-
 
     <!-- Leonel - Inicio -->
     <string name="inicio_hint_fecha">dd/mm/aaaa</string>

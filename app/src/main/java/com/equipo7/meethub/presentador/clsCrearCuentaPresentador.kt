@@ -26,12 +26,10 @@ class clsCrearCuentaPresentador(private val view: CrearCuentaActivity) {
             view.mostrarError("Todos los campos son obligatorios")
             return
         }
-
         if (psw.length < 8) {
             view.mostrarError("La contraseña debe tener mínimo 8 caracteres")
             return
         }
-
         CoroutineScope(Dispatchers.Main).launch {
             try {
                 val r = modelo.crearCuenta(
