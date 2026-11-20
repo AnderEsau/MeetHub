@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">MeetHub</string>
+    <!-- Compartidos -->
+    <string name="btn_regresar">← Regresar</string>
+    <string name="logo_descripcion">Logo MeetHub</string>
+    <string name="password_ayuda">Mínimo 8 caracteres, con letras y números</string>
+    <string name="nav_inicio">Inicio</string>
+    <string name="nav_salas">Salas</string>
+    <string name="nav_buzon">Buzón</string>
 </resources>
