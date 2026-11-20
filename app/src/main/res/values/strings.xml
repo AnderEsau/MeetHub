@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">MeetHub</string>
+    <!-- Samantha Catálogo de salas -->
+    <string name="sala_capacidad">Capacidad: %1$d personas\nAforo mínimo: %2$d</string>
+    <string name="salas_encabezado">Catálogo de Salas</string>
+    <string name="sala_btn_detalles">Ver detalles</string>
+    <string name="sala_btn_reservar">Reservar sala</string>
+
+    <!-- Samantha Crear cuenta -->
+    <string name="cuenta_encabezado">Crear cuenta</string>
+    <string name="cuenta_label_tipo">Tipo de usuario</string>
+    <string name="cuenta_label_identificador">Matrícula o RFC</string>
+    <string name="cuenta_hint_identificador">Matrícula o RFC</string>
+    <string name="cuenta_label_nombre">Nombre completo</string>
+    <string name="cuenta_hint_nombre">Nombre y apellidos</string>
+    <string name="cuenta_label_correo">Correo electrónico</string>
+    <string name="cuenta_hint_correo">correo@uthh.edu.mx</string>
+    <string name="cuenta_label_telefono">Teléfono</string>
+    <string name="cuenta_hint_telefono">10 dígitos</string>
+    <string name="cuenta_label_psw">Contraseña</string>
+    <string name="cuenta_hint_psw">Contraseña</string>
+    <string name="cuenta_label_pregunta">Pregunta de seguridad</string>
+    <string name="cuenta_label_respuesta">Respuesta</string>
+    <string name="cuenta_hint_respuesta">Escribe tu respuesta</string>
+    <string name="cuenta_btn_crear">Crear cuenta</string>
 </resources>
