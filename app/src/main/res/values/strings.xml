@@ -6,12 +6,12 @@
     <string name="nav_inicio">Inicio</string>
     <string name="nav_salas">Salas</string>
     <string name="nav_buzon">Buzón</string>
-  
+
     <!-- Splash -->
     <string name="splash_titulo">MeetHub</string>
     <string name="splash_subtitulo">Sistema de reservas de salas de biblioteca</string>
     <string name="splash_cargando">Cargando espacios disponibles...</string>
-  
+
     <!-- Login -->
     <string name="login_encabezado">MeetHub - Salas de reunión</string>
     <string name="login_titulo">Iniciar sesión</string>
@@ -23,7 +23,7 @@
     <string name="login_olvidaste">¿Olvidaste tu contraseña?</string>
     <string name="login_btn_ingresar">Iniciar sesión</string>
     <string name="login_crear_cuenta">¿No tienes cuenta? Crear cuenta</string>
-  
+
     <!-- Detalle de sala -->
     <string name="detalle_ubicacion">ÁREA / UBICACIÓN: %1$s</string>
     <string name="detalle_capacidad">CAPACIDAD MÁXIMA: %1$d personas</string>
@@ -32,8 +32,8 @@
     <string name="detalle_equipamiento">MOBILIARIO Y EQUIPAMIENTO: %1$s</string>
     <string name="detalle_descripcion">DESCRIPCIÓN: %1$s</string>
     <string name="detalle_btn_reservar">Reservar sala</string>
-  
-     <!-- Samantha Catálogo de salas -->
+
+    <!-- Samantha Catálogo de salas -->
     <string name="sala_capacidad">Capacidad: %1$d personas\nAforo mínimo: %2$d</string>
     <string name="salas_encabezado">Catálogo de Salas</string>
     <string name="sala_btn_detalles">Ver detalles</string>
