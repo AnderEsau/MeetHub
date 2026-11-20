@@ -147,7 +147,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:hint="@string/inicio_hint_fecha"
-                    android:inputType="date"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:clickable="true"
                     android:background="@drawable/fondo_campo"
                     android:padding="10dp"
                     android:layout_marginTop="4dp" />

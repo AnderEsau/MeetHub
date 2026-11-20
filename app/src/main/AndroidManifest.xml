@@ -15,7 +15,7 @@
         android:theme="@style/Theme.MeetHub"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".vista.MainActivity"
+            android:name=".vista.SplashActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -25,19 +25,35 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".vista.SplashActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
             android:name=".vista.LoginActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-<activity
+        <activity
             android:name=".vista.InicioActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".vista.DetalleSalaActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".vista.SalasActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".vista.CrearCuentaActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".vista.RestablecerPasswordActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".vista.NuevaSolicitudActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".vista.BuzonActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

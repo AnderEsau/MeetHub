@@ -68,7 +68,7 @@
     <string name="cuenta_btn_crear">Crear cuenta</string>
 
     <!-- Leonel - Inicio -->
-    <string name="inicio_hint_fecha">dd/mm/aaaa</string>
+    <string name="inicio_hint_fecha">Toca para elegir la fecha</string>
     <string name="inicio_encabezado">Inicio</string>
     <string name="inicio_titulo">Biblioteca UTHH</string>
     <string name="inicio_descripcion">Consulta la disponibilidad en tiempo real y solicita salas con al menos 3 días de anticipación.</string>
@@ -83,7 +83,7 @@
     <string name="solicitud_encabezado">Nueva solicitud</string>
     <string name="solicitud_label_sala">Sala</string>
     <string name="solicitud_label_fecha">Fecha (mínimo 3 días de anticipación)</string>
-    <string name="solicitud_hint_fecha">dd/mm/aaaa</string>
+    <string name="solicitud_hint_fecha">Toca para elegir la fecha</string>
     <string name="solicitud_label_inicio">Hora de inicio</string>
     <string name="solicitud_label_fin">Hora de fin</string>
     <string name="solicitud_label_asistentes">Número de asistentes</string>
