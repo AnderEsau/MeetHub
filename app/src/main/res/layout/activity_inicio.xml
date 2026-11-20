@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fondo">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/inicio_encabezado"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/blanco"
+        android:background="@color/azul_oscuro"
+        android:padding="16dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/fondo_tarjeta"
+                android:padding="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inicio_titulo"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/texto" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inicio_descripcion"
+                    android:textSize="13sp"
+                    android:textColor="@color/gris"
+                    android:layout_marginTop="4dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnVerCatalogo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/inicio_btn_catalogo"
+                        android:backgroundTint="@color/cafe"
+                        android:textColor="@color/blanco"
+                        android:layout_marginTop="12dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="4dp" />
+
+                    <Button
+                        android:id="@+id/btnReservarSala"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/inicio_btn_reservar"
+                        android:backgroundTint="@color/cafe"
+                        android:textColor="@color/blanco"
+                        android:layout_marginTop="12dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="4dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/fondo_tarjeta"
+                android:padding="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inicio_disponibilidad"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/texto" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inicio_label_sala"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/texto" />
+
+                <Spinner
+                    android:id="@+id/spnSalas"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/fondo_campo"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inicio_label_fecha"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/texto" />
+
+                <EditText
+                    android:id="@+id/txtFecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="@string/inicio_hint_fecha"
+                    android:inputType="date"
+                    android:background="@drawable/fondo_campo"
+                    android:padding="10dp"
+                    android:layout_marginTop="4dp" />
+
+                <Button
+                    android:id="@+id/btnConsultar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inicio_btn_consultar"
+                    android:backgroundTint="@color/cafe"
+                    android:textColor="@color/blanco"
+                    android:layout_marginTop="16dp"
+                    android:textSize="14sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHorarios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/barra_inferior" />
+
+</LinearLayout>
