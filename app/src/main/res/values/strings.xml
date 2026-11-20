@@ -109,11 +109,11 @@
     <string name="password_btn_guardar">Guardar contraseña nueva</string>
 
     <!-- Lary Buzón -->
+    <string name="buzon_item_sala">Sala utilizada: %1$s %2$s</string>
     <string name="buzon_encabezado">Buzón</string>
     <string name="buzon_titulo">Buzón de sugerencias y opiniones</string>
-    <string name="buzon_descripcion">Comparte tu opinión sobre la sala ocupada:</string>
+    <string name="buzon_descripcion">Comparte tu opinión sobre el estado, mobiliario o uso de la sala ocupada:</string>
     <string name="buzon_sin_reservas">Aún no tienes salas utilizadas para opinar.</string>
-    <string name="buzon_label_sala">Sala utilizada</string>
     <string name="buzon_hint_comentario">Escribe aquí tu sugerencia o comentario sobre la sala...</string>
     <string name="buzon_btn_enviar">Enviar sugerencia</string>
 </resources>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fondo">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/buzon_encabezado"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/blanco"
+        android:background="@color/azul_oscuro"
+        android:padding="16dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/fondo_tarjeta"
+                android:padding="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/buzon_titulo"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/texto" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/buzon_descripcion"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/texto" />
+
+                <TextView
+                    android:id="@+id/txtSinReservas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/buzon_sin_reservas"
+                    android:textSize="14sp"
+                    android:background="@drawable/fondo_aviso"
+                    android:padding="12dp"
+                    android:layout_marginTop="12dp"
+                    android:visibility="gone"
+                    android:textColor="@color/texto" />
+
+                <LinearLayout
+                    android:id="@+id/layoutFormulario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp">
+
+                        <Spinner
+                            android:id="@+id/spnSala"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="@drawable/fondo_campo" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/flecha_spinner"
+                            android:textSize="18sp"
+                            android:textColor="@color/texto"
+                            android:layout_gravity="end|center_vertical"
+                            android:layout_marginRight="14dp" />
+                    </FrameLayout>
+
+                    <EditText
+                        android:id="@+id/txtComentario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/buzon_hint_comentario"
+                        android:inputType="textMultiLine"
+                        android:background="@drawable/fondo_campo"
+                        android:padding="10dp"
+                        android:minLines="3"
+                        android:gravity="top"
+                        android:layout_marginTop="12dp" />
+
+                    <Button
+                        android:id="@+id/btnEnviar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/buzon_btn_enviar"
+                        android:backgroundTint="@color/cafe"
+                        android:textColor="@color/blanco"
+                        android:layout_marginTop="12dp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/barra_inferior" />
+</LinearLayout>
