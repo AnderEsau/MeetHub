@@ -1,7 +1,6 @@
 package com.equipo7.meethub.presentador
 
 import com.equipo7.meethub.modelo.clsCrearCuentaModelo
-import com.equipo7.meethub.vista.CrearCuentaActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
