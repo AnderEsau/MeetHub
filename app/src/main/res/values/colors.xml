@@ -2,14 +2,16 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="azul_oscuro">#2C3E50</color>
-    <color name="cafe">#5A3E2B</color>
-    <color name="fondo">#EFEBE4</color>
+    <color name="azul_oscuro">#2B3E50</color>
+    <color name="cafe">#4A3525</color>
+    <color name="cafe_claro">#7C583E</color>
+    <color name="azul_enlace">#3F5F84</color>
+    <color name="fondo">#F0ECE6</color>
     <color name="blanco">#FFFFFF</color>
     <color name="texto">#222222</color>
     <color name="gris">#6B6B6B</color>
     <color name="borde">#D9D2C7</color>
-    <color name="aviso">#EFE6DA</color>
+    <color name="aviso">#EFE6DD</color>
     <color name="verde">#2E7D32</color>
     <color name="rojo">#C62828</color>
     <color name="pendiente">#F5EBDD</color>
