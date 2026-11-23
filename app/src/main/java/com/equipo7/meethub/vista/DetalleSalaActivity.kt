@@ -7,9 +7,10 @@ import android.text.Html
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import androidx.viewpager2.widget.ViewPager2
+import com.equipo7.meethub.adaptador.GaleriaAdaptador
 import android.widget.TextView
 import android.widget.Toast
-import com.bumptech.glide.Glide
 import com.equipo7.meethub.modelo.dataDetalleSala
 import com.equipo7.meethub.presentador.clsDetalleSalaPresentador
 import androidx.activity.enableEdgeToEdge
@@ -19,7 +20,8 @@ import androidx.core.view.WindowInsetsCompat
 import com.equipo7.meethub.R
 class DetalleSalaActivity : AppCompatActivity() {
     private lateinit var presenter: clsDetalleSalaPresentador
-    private lateinit var imgSala: ImageView
+    private lateinit var vpGaleria: ViewPager2
+    private lateinit var adapterGaleria: GaleriaAdaptador
     private lateinit var txtNombre: TextView
     private lateinit var txtUbicacion: TextView
     private lateinit var txtCapacidad: TextView
@@ -43,7 +45,7 @@ class DetalleSalaActivity : AppCompatActivity() {
             insets
         }
         // 1. Enlazar componentes XML
-        imgSala = findViewById(R.id.imgSala)
+        vpGaleria = findViewById(R.id.vpGaleria)
         txtNombre = findViewById(R.id.txtNombre)
         txtUbicacion = findViewById(R.id.txtUbicacion)
         txtCapacidad = findViewById(R.id.txtCapacidad)
@@ -53,6 +55,9 @@ class DetalleSalaActivity : AppCompatActivity() {
         txtDescripcion = findViewById(R.id.txtDescripcion)
         btnReservar = findViewById(R.id.btnReservar)
         btnRegresar = findViewById(R.id.btnRegresar)
+        // Carrusel de fotos: una foto por pantalla, se desliza de lado
+        adapterGaleria = GaleriaAdaptador(emptyList())
+        vpGaleria.adapter = adapterGaleria
         // 2. Datos que llegaron por Intent (la sala elegida y el usuario)
         salaId = intent.getIntExtra("SALA_ID", 0)
         // Datos del usuario que llegaron por Intent
@@ -84,11 +89,10 @@ class DetalleSalaActivity : AppCompatActivity() {
         txtHorario.text = negritas(getString(R.string.detalle_horario, sala.horaApertura, sala.horaCierre))
         txtEquipamiento.text = negritas(getString(R.string.detalle_equipamiento, sala.equipamientoTexto))
         txtDescripcion.text = negritas(getString(R.string.detalle_descripcion, sala.descripcion))
-        Glide.with(this)
-            .load(sala.imagenUrl)
-            .placeholder(android.R.drawable.ic_menu_gallery)
-            .error(android.R.drawable.stat_notify_error)
-            .into(imgSala)
+        // El carrusel muestra la galería; si la sala no tiene, se usa la foto principal
+        val fotos = (if (sala.galeria.isNotEmpty()) sala.galeria else listOf(sala.imagenUrl))
+            .filter { it.isNotBlank() }
+        adapterGaleria.actualizarLista(fotos)
     }
     fun abrirNuevaSolicitud() {
         val intent = Intent(this, NuevaSolicitudActivity::class.java)

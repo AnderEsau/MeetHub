@@ -40,8 +40,11 @@ class SalasAdaptador(
         )
         holder.txtEquipamiento.text = sala.equipamiento
 
+        val baseUrl = "https://anderehj.somos4a.org/meethub_api/"
+        val urlCompleta = baseUrl + sala.imagenUrl
+
         Glide.with(holder.itemView.context)
-            .load(sala.imagenUrl)
+            .load(urlCompleta)
             .placeholder(android.R.drawable.ic_menu_gallery)
             .error(android.R.drawable.stat_notify_error)
             .into(holder.imgSala)
