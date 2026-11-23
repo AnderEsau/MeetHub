@@ -3,7 +3,7 @@
 // Entrega los datos de una sala y el equipamiento que tiene (pantalla Detalle de sala).
 // Método: GET
 // Recibe: sala_id en la dirección, por ejemplo detalle_sala.php?sala_id=4
-// Responde: un objeto JSON con la sala, equipamiento_texto y el arreglo equipamiento.
+// Responde: un objeto JSON con la sala, equipamiento_texto, el arreglo equipamiento y la galeria (fotos extra).
 header("Content-Type: application/json; charset=UTF-8");
 require_once "config/conexion.php";
 
@@ -47,7 +47,15 @@ try {
         $texto[] = $e['cantidad'] . " " . $e['nombre_equipamiento']; // por ejemplo "40 Sillas Ergonómicas"
     }
 
-    // 3. Convertimos los números a enteros y armamos la respuesta.
+    // 3. Buscamos las fotos de la galería (el carrusel).
+    $stmt = $pdo->prepare("SELECT url_imagen
+                           FROM tblimagenes_sala
+                           WHERE id_sala = ?
+                           ORDER BY id_imagen");
+    $stmt->execute([$sala_id]);
+    $galeria = $stmt->fetchAll(PDO::FETCH_COLUMN); // una lista simple con las rutas de las fotos
+
+    // 4. Convertimos los números a enteros y armamos la respuesta.
     $sala['id_sala'] = (int) $sala['id_sala'];
     $sala['id_tipo_sala'] = (int) $sala['id_tipo_sala'];
     $sala['capacidad'] = (int) $sala['capacidad'];
@@ -56,6 +64,7 @@ try {
     $sala['hora_cierre'] = substr($sala['hora_cierre'], 0, 5);
     $sala['equipamiento_texto'] = implode(", ", $texto); // texto listo para mostrarlo en "Mobiliario y equipamiento"
     $sala['equipamiento'] = $equipamiento;
+    $sala['galeria'] = $galeria;
 
     echo json_encode($sala, JSON_UNESCAPED_UNICODE);
 

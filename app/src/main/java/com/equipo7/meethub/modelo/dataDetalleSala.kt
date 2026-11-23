@@ -17,6 +17,7 @@ data class dataDetalleSala(
     @SerialName("hora_cierre") val horaCierre: String = "",
     @SerialName("imagen_url") val imagenUrl: String = "",
     @SerialName("equipamiento_texto") val equipamientoTexto: String = "",
-    @SerialName("equipamiento") val equipamiento: List<dataEquipamiento> = emptyList()
+    @SerialName("equipamiento") val equipamiento: List<dataEquipamiento> = emptyList(),
+    @SerialName("galeria") val galeria: List<String> = emptyList()
 
 )

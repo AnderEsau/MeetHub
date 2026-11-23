@@ -18,12 +18,10 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <ImageView
-                    android:id="@+id/imgSala"
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/vpGaleria"
                     android:layout_width="match_parent"
-                    android:layout_height="230dp"
-                    android:scaleType="centerCrop"
-                    android:src="@android:drawable/ic_menu_gallery" />
+                    android:layout_height="230dp" />
                 <TextView
                     android:id="@+id/btnRegresar"
                     android:layout_width="wrap_content"

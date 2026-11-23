@@ -38,6 +38,7 @@
     <string name="detalle_equipamiento">&lt;b&gt;MOBILIARIO Y EQUIPAMIENTO:&lt;/b&gt; %1$s</string>
     <string name="detalle_descripcion">&lt;b&gt;DESCRIPCIÓN:&lt;/b&gt; %1$s</string>
     <string name="detalle_btn_reservar">Reservar sala</string>
+    <string name="detalle_foto_descripcion">Foto de la sala</string>
 
     <!-- Leonel faltantes -->
     <string name="solicitud_aforo">Aforo mínimo de la sala: %1$d</string>
