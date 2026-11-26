@@ -2,6 +2,10 @@ plugins {
     alias(libs.plugins.android.application)
     //Agregamos el plugin de Kotlin Serialization
     kotlin("plugin.serialization") version "1.9.24"
+    //Plugin de google services
+    id("com.google.gms.google-services")
+    //Plugin de Firebase App Distribution
+    id("com.google.firebase.appdistribution")
 }
 
 android {
@@ -61,4 +65,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
     // Corrutinas de Kotlin
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
+    // FireBase
+    implementation(platform("com.google.firebase:firebase-bom:35.2.0"))
+    implementation("com.google.firebase:firebase-analytics")
 }
